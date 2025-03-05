@@ -2,10 +2,6 @@ import { JSX, useState } from 'react';
 import {
   Home,
   Folder,
-  DollarSign,
-  BarChart,
-  User,
-  Users,
   ChevronLeft,
   CreditCard,
   Flag,
@@ -13,11 +9,7 @@ import {
   ShoppingCart,
   Package,
   Store,
-  File,
-  FileText,
-  ArrowLeftRight,
-  Download,
-  BookOpen,
+  File
 } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 
@@ -54,40 +46,19 @@ export default function DashboardLayout({ content }: DashboardLayoutProps) {
           icon: <Package size={20} />,
           children: [
             { id: "all-products", label: "All Products", icon: <Store size={20} />, path: "/products/all" },
-            { id: "categories", label: "Categories", icon: <Folder size={20} />, path: "/products/categories" },
-          ],
+            { id: "categories", label: "Categories", icon: <Folder size={20} />, path: "/products/categories" }
+          ]
         },
         { id: "billing", label: "Billing", icon: <CreditCard size={20} />, path: "/billing" },
         { id: "invoice", label: "Invoice", icon: <File size={20} />, path: "/invoice" },
       ],
     },
-    {
-      id: "finance",
-      label: "Finance",
-      icon: <DollarSign size={20} />,
-      children: [
-        { id: "settlement", label: "Instant Settlement", icon: <FileText size={20} />, path: "/settlement", isNew: true },
-        { id: "disbursement", label: "Disbursement", icon: <ArrowLeftRight size={20} />, path: "/disbursement" },
-        { id: "remittance", label: "Remittance", icon: <BarChart size={20} />, path: "/remittance" },
-      ],
-    },
-    {
-      id: "documents",
-      label: "Documents",
-      icon: <Folder size={20} />,
-      children: [
-        { id: "file", label: "File Unduhan", icon: <Download size={20} />, path: "/file" },
-        { id: "dokumentasi", label: "Dokumentasi", icon: <BookOpen size={20} />, path: "/dokumentasi" },
-      ],
-    },
-    { id: "profil", label: "Profil Saya", icon: <User size={20} />, path: "/profil" },
-    { id: "team", label: "User Team", icon: <Users size={20} />, path: "/team" },
   ];
 
   // Logo component
   const Logo = () => (
     <div className="flex items-center">
-      <span className="text-xl font-bold text-white">duitku</span>
+      <span className="text-xl font-bold text-white">Dashboard Example</span>
     </div>
   );
 
@@ -102,7 +73,7 @@ export default function DashboardLayout({ content }: DashboardLayoutProps) {
           <div className="max-w-full mx-auto px-4">
             <div className="flex justify-between items-center py-3">
               <div className="flex items-center space-x-4">
-                <div className="text-lg text-gray-700">duitku</div>
+                <div className="text-lg text-gray-700">Dashboard Example</div>
                 <div className="flex space-x-2">
                   <button className="flex items-center space-x-1 px-3 py-1 rounded-full text-red-500 bg-red-50 border border-red-200">
                     <span className="text-sm">Production</span>
@@ -120,7 +91,7 @@ export default function DashboardLayout({ content }: DashboardLayoutProps) {
                   <span className="text-sm">Saldo: Rp 68.028.925</span>
                 </div>
                 <div className="text-gray-700">
-                  <span className="text-sm font-medium">DUITKU</span>
+                  <span className="text-sm font-medium">Dashboard Example</span>
                   <ChevronLeft size={16} className="inline ml-1" />
                 </div>
               </div>

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Desc from '../components/Desc'
 import Title from '../components/Title'
 import logo from "../assets/images/logo.png"
-import featureBg from "../assets/images/duitku-feature-background.jpg"
+import featureBg from "../assets/images/Dashboard Example-feature-background.jpg"
 import LinkText from '../components/LinkText';
 
 export default function LoginForm() {
@@ -11,13 +11,13 @@ export default function LoginForm() {
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='w-[100vw] md:w-[50vw] p-10 pt-6 md:p-18 md:pt-16 md:pl-20'>
-                <img src={logo} alt="logo" className='mb-24' />
+                <img src={logo} alt="logo" className='w-12  mb-24' />
                 <div className='flex flex-col gap-6 mb-8'>
                     <Title
                         title='Welcome'
                     />
                     <Desc
-                        text="Duitku connects you to all key payment methods, enabling businesses to accept payments and optimize growth across online, in-app, and in-store."
+                        text="Dashboard Example connects you to all key payment methods, enabling businesses to accept payments and optimize growth across online, in-app, and in-store."
                     />
                 </div>
                 <div className='flex flex-col gap-6'>
@@ -37,7 +37,7 @@ export default function LoginForm() {
                         name='Check to Login as Team member (?)'
                     />
                     <Button 
-                        link={'/dashboard'}
+                        link={'/penarikan'}
                         name='Sign in' 
                     />
                     <LinkText

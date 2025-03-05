@@ -2,7 +2,7 @@ import Desc from '../components/Desc'
 import Title from '../components/Title'
 import { Input, Button } from '../components/FormComponents';
 import logo from "../assets/images/logo.png"
-import featureBg from "../assets/images/duitku-feature-background.jpg"
+import featureBg from "../assets/images/Dashboard Example-feature-background.jpg"
 import LinkText from '../components/LinkText';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -14,10 +14,10 @@ export default function RegisterForm() {
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='w-[100vw] md:w-[50vw] p-10 pt-6 md:p-18 md:pt-16 md:pl-20'>
-                <img src={logo} alt="logo" className='mb-24' />
+                <img src={logo} alt="logo" className='w-12 mb-24' />
                 <div className='flex flex-col gap-6 mb-8'>
                     <Title 
-                        title='Register Duitku'
+                        title='Register Dashboard Example'
                     />
                     <Desc 
                         text="Your easy & secure online payment provider"
@@ -40,7 +40,7 @@ export default function RegisterForm() {
                         link={null}
                     />
                     <div className='flex flex-row gap-3'>
-                        <Desc text="Already have Duitku Account?" />
+                        <Desc text="Already have Dashboard Example Account?" />
                         <LinkText 
                             path='/login'
                             pathName='Sign In.'

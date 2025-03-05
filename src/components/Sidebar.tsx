@@ -3,15 +3,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   Home,
   Search,
-  FileText,
   Folder,
-  DollarSign,
-  ArrowLeftRight,
-  BarChart,
-  Download,
-  BookOpen,
   User,
-  Users,
   LogOut,
   ChevronLeft,
   ChevronRight,
@@ -144,7 +137,6 @@ export default Sidebar;
 // Example Usage:
 export const SidebarExample: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-
   const navItems: NavItem[] = [
     { id: "dashboard", label: "Dashboard", icon: <Home size={20} />, path: "/dashboard" },
     { id: "penarikan", label: "Penarikan", icon: <Search size={20} />, path: "/penarikan" },
@@ -153,9 +145,9 @@ export const SidebarExample: React.FC = () => {
       label: "Sales",
       icon: <ShoppingCart size={20} />,
       children: [
-        { 
-          id: "products", 
-          label: "Products", 
+        {
+          id: "products",
+          label: "Products",
           icon: <Package size={20} />,
           children: [
             { id: "all-products", label: "All Products", icon: <Store size={20} />, path: "/products/all" },
@@ -166,36 +158,16 @@ export const SidebarExample: React.FC = () => {
         { id: "invoice", label: "Invoice", icon: <File size={20} />, path: "/invoice" },
       ],
     },
-    {
-      id: "finance",
-      label: "Finance",
-      icon: <DollarSign size={20} />,
-      children: [
-        { id: "settlement", label: "Instant Settlement", icon: <FileText size={20} />, path: "/settlement", isNew: true },
-        { id: "disbursement", label: "Disbursement", icon: <ArrowLeftRight size={20} />, path: "/disbursement" },
-        { id: "remittance", label: "Remittance", icon: <BarChart size={20} />, path: "/remittance" },
-      ],
-    },
-    {
-      id: "documents",
-      label: "Documents",
-      icon: <Folder size={20} />,
-      children: [
-        { id: "file", label: "File Unduhan", icon: <Download size={20} />, path: "/file" },
-        { id: "dokumentasi", label: "Dokumentasi", icon: <BookOpen size={20} />, path: "/dokumentasi" },
-      ],
-    },
     { id: "profil", label: "Profil Saya", icon: <User size={20} />, path: "/profil" },
-    { id: "team", label: "User Team", icon: <Users size={20} />, path: "/team" },
   ];
-
+  
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
   };
 
   const Logo = () => (
     <div className="flex items-center">
-      <span className="text-xl font-bold">duitku</span>
+      <span className="text-xl font-bold">Dashboard Example</span>
       <span className="text-xs ml-1 text-green-400">powered by Xendit</span>
     </div>
   );
